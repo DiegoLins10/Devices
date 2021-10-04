@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Devices.Services;
 
 namespace Devices.Entities
 {
-    class Printer : Device
+    class Printer : Device, IPrinter
     {
         public override void ProcessDoc(string document)
         {
             Console.WriteLine("Printer processing: " + document);
         }
 
-        public string Print(string doc)
+        public void Print(string doc)
         {
-            return "Print " + doc;
+            Console.WriteLine("Printer print " + doc);
         }
     }
 }

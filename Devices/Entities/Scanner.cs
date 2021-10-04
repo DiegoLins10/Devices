@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Devices.Services;
 
 namespace Devices.Entities
 {
-    class Scanner : Device
+    class Scanner : Device, IScanner
     {
         public override void ProcessDoc(string document)
         {
